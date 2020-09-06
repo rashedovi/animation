@@ -1,0 +1,303 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    
+}
+.navbar-nav .nav-item {
+    padding-right: 10px;
+}
+.navbar-nav .nav-link {
+    color: #fba728 !important;
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link:after {
+    background: #fba728 !important;
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -10px;
+    transition: all 0.4s ease;
+}
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+.hover-efect{
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: #fba728;
+}
+.hover-efect img{
+    max-width: 100%;
+    transition: all .5s ease-out;
+    animation-name: imgZoom;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 30s;
+    animation-direction: alternate;
+}
+@keyframes imgZoom{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+.hover-efect > span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000094;
+    top: 0;
+    left: 0;
+}
+.hover-efect h1{
+    font-size: 100px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    line-height: 1.1;
+    margin-top: 150px;
+}
+
+.hover-efect p{
+    font-size: 34px;
+    font-weight: 400;
+    width: 48%;
+    margin: 0 auto;
+}
+.hover-efect a{
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    height: 100px;
+}
+.hover-efect a i{
+    color: #fba728;
+    font-size: 43px;
+    display: inline-block;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-name: runicon;
+}
+@keyframes runicon{
+    0%{
+        padding-top: 0;
+    }
+    100%{
+        padding-top: 60px;
+    }
+}
+.neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fba728;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    overflow: hidden;
+    transition: all .2s;
+    height: inherit !important;
+}
+.neon:hover{
+    color: #fff !important;
+    background: #2196f3 !important;
+    box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+.neon span{
+    position: absolute;
+    display: block;
+}
+.neon span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
+}
+.neon:hover span:nth-child(1){
+    left: 100%;
+    transition: 1s;
+}
+.neon span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(170deg,transparent,#2196f3);
+}
+.neon:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: .5s;
+}
+.neon span:nth-child(2){
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+}
+.neon:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: .25s;
+}
+.neon span:nth-child(4){
+    bottom: -100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+.neon:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: .75s;
+}
+
+.gallery{
+    padding: 50px 0;
+}
+.hover-efect-1{
+    position: relative;
+    overflow: hidden;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 128, 0.39);
+    transition: .5s linear;
+    transform: scale(0);
+}
+.hover-efect-1:hover .overlay{
+    transform: scale(1);
+}
+.hover-efect-1 h1{
+    font-size: 21px;
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+    color: #fff;
+    transition: .5s linear;
+    opacity: 0;
+}
+.hover-efect-1 p{
+    font-size: 15px;
+    position: absolute;
+    bottom: -10px;
+    left: 40px;
+    color: #fff;
+    transition: .5s linear;
+    opacity: 0;
+}
+.hover-efect-1:hover h1{
+    bottom: 50px;
+    opacity: 1;
+}
+.hover-efect-1:hover p{
+    bottom: 15px;
+    opacity: 1;
+}
+.hover-efect-1 .one{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #fff;
+    transition: .5s linear;
+    opacity: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0.9);
+}
+.hover-efect-1 .four{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background: #fff;
+    transition: .5s linear;
+    opacity: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0.9);
+}
+.hover-efect-1 .two{
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    background: #fff;
+    transition: .5s linear;
+    opacity: 0;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0.9);
+}
+.hover-efect-1 .three{
+    position: absolute;
+    top: 0;
+    left: 31px;
+    background: #fff;
+    transition: .5s linear;
+    opacity: 0;
+    width: 1px;
+    height: 100%;
+    transform: scaleY(0.9);
+}
+.hover-efect-1:hover .one{
+    top: 20px;
+    opacity: 1;
+}
+.hover-efect-1:hover .two{
+    bottom: 20px;
+    opacity: 1;
+}
+.hover-efect-1:hover .three{
+    left: 31px;
+    opacity: 1;
+}
+.hover-efect-1:hover .four{
+    right: 31px;
+    opacity: 1;
+}
+
+.hover-efect-1 ul{
+    font-size: 17px;
+    position: absolute;
+    top: 25px;
+    right: 0;
+    color: #fff;
+    transition: .5s linear;
+    opacity: 0;
+}
+.hover-efect-1 ul li{
+    padding: 3px;
+}
+.hover-efect-1 ul li a{
+    text-decoration: none;
+    color: #fff;
+    background: cadetblue;
+    width: 30px;
+    height: 30px;
+    display: block;
+    line-height: 30px;
+    text-align: center;
+}
+.hover-efect-1 ul li i{}
+.hover-efect-1:hover ul{
+    right: 40px;
+    opacity: 1;
+}
